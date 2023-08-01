@@ -1,0 +1,8 @@
+Visual Studio Code@1.78.2.0
+Blender@3.5.1.0
+Spotify@
+Audacity@3.3.2.0
+Notepad++@8.5.3.0
+paint.net@5.3.8.4
+Sublime Text@4.1.4.3
+VLC@3.0.18.0
