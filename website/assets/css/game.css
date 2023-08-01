@@ -1,0 +1,232 @@
+canvas.snake{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100vw;
+    height:100vh;
+    background: radial-gradient( #141414, #222);
+}
+.game{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    position: absolute;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+}
+.game h1{
+    margin:0;
+}
+.game .reset_button{
+    border: 2px solid #69f9a1;
+    padding: 0.7vw 1vw;
+    border-radius: 18px;
+    background: transparent;
+    font-size: 1.5ch;
+    font-family: 'gotham';
+    color: white;
+    transition:.4s;
+    cursor:pointer;
+    outline:none;
+}
+.game .button_div{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:center;
+}
+.game .button_div .stat_button, .game .mes_stat_button{
+    background: transparent;
+    color: burlywood;
+    border: 1px solid white;
+    padding: 0.5vw;
+    border-radius: 18px;
+    margin-right: 2vw;
+    font-family: 'gotham';
+    font-size: 1.4ch;
+    transition:.4s;
+    cursor:pointer;
+}
+.game .button_div .stat_button:hover{
+    background: white;
+    color: #e3c05e;
+}
+.game .mes_stat_button:hover{
+    background: white;
+    color: #5ec2e3;
+}
+.game .reset_button:hover{
+background:#69f9a1;
+box-shadow:0px 0px 17px #69f9a1,
+           0px 0px 36px #69f9a1ee,
+           0px 0px 48px #69f9a199,
+           0px 0px 56px #69f9a166;
+transform:translate(-3px,-3px);
+}
+
+.buttons_div {
+    display:flex;
+    top:0;
+    right:0;
+    position:fixed;
+    margin:1vw;
+}
+
+.buttons_div button.change_style_bouton{
+    background: #2d8efd;
+    border:0px;
+    padding: 0.45vw 0.6vw;
+    border-radius: 18px;
+    font-size: 1.2ch;
+    margin:0 1vw;
+    font-family: 'gotham';
+    color: white;
+    transition:.4s;
+    cursor:pointer;
+    outline:none;
+}
+.buttons_div button.change_style_bouton:not(.old):hover{
+    background: #2d8efd99;
+    color:gray;
+}
+.buttons_div button.change_style_bouton.old{
+    font-family: Arial;
+    border-radius:0px;
+}
+.buttons_div button.pause_bouton{
+    background: #172eff;
+    border:0px;
+    padding: 0.45vw 0.6vw;
+    border-radius: 18px;
+    font-size: 1.2ch;
+    margin:0 1vw;
+    font-family: 'gotham';
+    color: white;
+    transition:.4s;
+    cursor:pointer;
+    outline:none;
+}
+.buttons_div button.pause_bouton:hover{
+    background: #172eff99;
+    color:gray;
+}
+
+.pause_screen{
+    z-index: 2;
+    color: white;
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ffffff1f;
+}
+.pause_screen h1{
+    margin-top:20vh;
+font-size:4ch;
+}
+.pause_screen p{
+    font-size:1.5ch;
+    white-space: pre-line;
+    text-align: left;
+}
+.pause_screen span{
+    font-size:1.2ch;
+}
+.pause_screen.active{
+    display:flex;
+}
+/* 3d design button on hover */
+.pause_screen .reprendre{
+    font-size:1vw;
+    padding:0.5vw 0.7vw;
+    border-radius:18px;
+    border:1px solid transparent;
+    background:#ffba3b;
+    color:white;
+    transition:all .6s;
+    cursor:pointer;
+    outline:none;
+}
+.pause_screen .reprendre:hover{
+    background:#ffba3b99;
+    color:#c4c4c4;
+    border: 1px solid #ffba3b;
+    box-shadow:3px 0px 0px #ffba3b,
+               9px 0px 0px #ffba3bee,
+               15px 0px 0px #ffba3b99,
+               21px 0px 0px #ffba3b66,
+               27px 0px 0px #ffba3b55,
+               33px 0px 0px #ffba3b44,
+               39px 0px 0px #ffba3b33,
+               45px 0px 0px #ffba3b22,
+               51px 0px 0px #ffba3b11,
+               57px 0px 0px #ffba3b05;
+}
+.stats_paused{
+    position:relative;
+    width:48%;
+    height:fit-content;
+}
+div.stats{
+    position: absolute;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 48%;
+    height: 51%;
+    top:25%;
+}
+div.stats canvas{
+    background:#01010140;
+    z-index: 20;
+    position: relative;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 18px;
+    border: 1px solid #ffffff1f;
+    padding:1vw;
+}
+.stats button,.now_stats button{
+    margin: -2% 0 auto -2%;
+    background: transparent;
+    outline: none;
+    border: 1px solid white;
+    border-radius: 50%;
+    padding: 0.4vw 0.6vw;
+    font-size: 2ch;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    z-index: 21;
+    transition: .4s;
+}
+.stats button:hover,.now_stats button:hover{
+    background: white;
+    color: black;
+}
+
+.now_stats {
+    width: 50%;
+    height: 75%;
+    top:8%;
+    position: absolute;
+    background: #87b7ff;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.mes_stat_button{
+    color: #6eafff;
+}

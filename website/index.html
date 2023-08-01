@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="PKRSPLS" />
+    <meta property="og:site_name" content="PKRSPLS">
+    <title>PKRSPLS</title>
+    <link rel="stylesheet" href="assets/css/game.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <script src="assets/scripts/sweetalert2.all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.2.1/dist/chart.umd.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="links">
+            <a href="https://github.com/PKRSPLS/repo_app/wiki">Documentation</a>
+            <a href="https://discord.gg/TF3UgZwMRH">Discord</a>
+            <a href="https://github.com/PKRSPLS/repo_app" class="github"><img src="assets/images/github.png" alt="notre github" title="notre github"/>github</a>
+            <a id="dl">Télécharger</a>
+            <a href="snake_doc.html">Snake Info</a>
+        </div> 
+    </header>
+    <h1 class="titre">PKRSPLS</h1>
+    <h2>Une Application simple d'utilisation</h2>
+    <p>Notre objectif est de vous simplifier la tâche, en vous proposant 
+        une large diversité de logiciels gratuits et sans virus, sans que vous ayez besoin d'être administrateur.
+        Grâce à notre technologie, nous vous facilitons l'accès aux applications. (vous pouvez aller les chercher directement sur la page Github, ou bien directement à l'aide du boutton télécharger)
+    </p>
+    <div class="screens">
+        <img src="assets/images/screen.png" title="screen" alt="screen du logiciel"/>
+        <img src="assets/images/screen2.png" title="screen" alt="2eme screen du logiciel"/>
+    </div>
+    <section class="team">
+        <h1>Equipe et répartition des tâches</h1>
+        <p>Notre équipe est composée de 2 personnes (NotTrueFalse et Ocin4ever) et nous sommes des lycéens.
+            Nous voulions créer un site qui permette de télécharger des logiciels sans avoir besoin d'être administrateur.
+            Ocin4ever à créé l'application et NotTrueFalse le site web.
+        </p>
+    </section>
+    <section class="function">
+        <h1>Fonctionnalités</h1>
+        <p>
+            La première partie de ce projet est en python, nous avons utilisé le module customtkinter pour créer une interface graphique.
+            Sur celle-ci, vous pouvez télécharger les logiciels que nous avons mis à votre disposition et faire des mises à jour (si disponibles).
+            L'application utilise le thème par défaut de windows mais une option pour le changer est disponible.
+            Vous pouvez aussi chercher une application si celle-ci n'apparait pas dans le haut de la liste.
+            Certains bugs persistent dans l'application, par exemple les mises à jour ne fonctionnent pas,
+            ou la progression du téléchargement d'un programme ne s'affiche pas, mais nous travaillons pour les résoudre.
+            Si vous en trouvez, merci de nous les signaler sur notre <a href="https://discord.gg/TF3UgZwMRH">discord</a>.
+        </p>
+    </section>
+    <section class="statstistique">
+        <h1>Difficultés rencontrées et améliorations possibles</h1>
+        <p>
+            L'exportation de l'application en .exe est assez compliquée,
+            L'interface graphique a également nécessité des heures de travail. 
+            Il a fallut utiliser customtkinter, pour avoir un résultat agréable visuellement.
+            "repack" les applications, ou devoir extraire le contenu des installeurs pour pouvoir les repack est aussi compliqué.
+            Nous avons quelques mises à jour à faire comme la possibilité de mettre à jour les applications, réduire la taille de l'application et 
+            mieux gérer les subprocess avec python, et ajouter des paramètres.
+        </p>
+    </section>
+</body>
+<script src="assets/scripts/script.js"></script>
+<script>
+    function reloadAssets(){
+        document.querySelectorAll("script").forEach(c=>c.src = c.src+"?"+Math.random());
+        document.querySelectorAll("link").forEach(c=>c.href = c.href+"?"+Math.random());
+    }
+    document.getElementById("dl").addEventListener("click", function(){
+        var a = document.createElement("a");
+        a.href = "https://github.com/PKRSPLS/repo_app/releases/download/Beta_3/PKRSPLS_v1.0.0.beta-3.compiled.zip";
+        a.download = "PKRSPLS_v1.0.0.beta-3.compiled.zip";
+        a.click();
+        a.remove();
+    });
+    document.addEventListener('DOMContentLoaded', function() {
+        reloadAssets();
+    });
+</script>
+</html>

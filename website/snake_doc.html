@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation snake</title>
+    <link rel="stylesheet" href="assets/css/snake_doc.css">
+</head>
+<body>
+    <header>
+        <button id="back">Retour</button>
+    </header>
+    <h1>Le Snake 🐍</h1>
+    <p>Le snake est un jeu qui consiste à manger des pommes pour grandir, et éviter de se mordre la queue.</p>
+    <section class="fonction">
+        <h2>Fonctionnalité</h2>
+        <p>C'est un jeu qui ce joue avec les flèches directionnels et se déclanche sur la page principal
+            à l'aide d'une "formule magique" (appuyez sur les touches "s" "n" "a" "k" "e" "s" , et un pop up s'affichera).
+            Vous aurez alors la possibilité de jouer au snake ou de regarder les statistiques global.
+            dans le jeu, il y a deux boutons en haut a droite, un pour mettre en pause, et un pour changer de style (retro / nouveau).
+            Il y a plusieurs "fruits", faite attention, certains sont capables de vous téléporter, d'autre se teleporte eux-même.
+            L'entièreté du jeu est codé en javascript, et le style est en css, normalement le javascript est pas mal commenté.
+        </p>
+    </section>
+    <section class="difficulty">
+        <h2>Difficulté rencontrée et amélioration possible</h2>
+        <p>
+            Au file des lignes de code de programmation, plusieurs difficulté sont apparue, comme par exemple,
+            le fait que le serpent ne puisse pas se mordre la queue, ou encore le fait que les pommes ne s'affiches pas
+            avec le bon framerate (seulement en 10/fps). Il y a aussi le fait que le serpent ne puisse pas se téléporter.
+            Et pour les sons, parfois il ne se jouait pas simultanément, mais nous avons réussi à régler ce problème.
+            Les graphiques et popup ont été réalisé grâce a des librairies externes. Mais sinon tout le reste a été codé
+            de a à z. 
+        </p>
+    </section>
+</body>
+<script>
+    document.getElementById("back").addEventListener("click", () => {
+        window.location.href = "index.html";
+    });
+</script>
+</html>
