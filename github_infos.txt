@@ -8,6 +8,7 @@ Inkscape@1.3.0.0
 Opera@101.0.4843.33
 Firefox@116.0.0.8608
 Chrome@115.0.5790.171
+GitHub Desktop@3.2.7.0
 paint.net@5.3.8.4
 Sublime Text@4.1.4.3
 VLC@3.0.18.0
